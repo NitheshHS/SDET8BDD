@@ -1,8 +1,9 @@
 package hookClass;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -52,7 +53,9 @@ public class Hook extends BaseUtil{
 	@After(order=1)
 	public void tearDown(Scenario scenario) throws Throwable {
 		if(scenario.isFailed()) {
-			wLib.getScreenshot(base.driver, scenario.getName());
+			String scenarioName = scenario.getName().replaceAll(" ", "_");
+			byte[] Screenshot = ((TakesScreenshot)base.driver).getScreenshotAs(OutputType.BYTES);
+			scenario.attach(Screenshot, "image/png", scenarioName);
 		}
 	}
 

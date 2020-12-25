@@ -6,7 +6,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @Test
-@CucumberOptions(features = {".\\src\\test\\resources\\Features\\Organization.feature"},
+@CucumberOptions(features = {".\\src\\test\\resources\\Features"},
 					glue= {"stepDefinitions","hookClass"},
 					dryRun = false,
 					plugin = {"pretty",
