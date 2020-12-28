@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Dec 18 17:25:03 IST 2020</td>
+<td>Started on:</td><td>Mon Dec 21 19:18:12 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (27 ms)</td>
+<tr><td>Total time:</td><td>55 seconds (55446 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,5 +67,31 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runnerIO.Runner.runScenario()'><b>runScenario</b><br>Test class: runnerIO.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "I want to create an organization by using mandatory fields", "Optional[Oraganization]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Testyantra] but found [Testyantra450]
+	at stepDefinitions.OrganizationStepDef.i_navigate_to_organization_information_and_verify(OrganizationStepDef.java:49)
+	at ?.I navigate to organization information and verify(file:///C:/Users/Nitheesha/git/Sdet8Bdd/SDET8BDD/./src/test/resources/Features/Organization.feature:10)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace722160979", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace722160979'><pre>java.lang.AssertionError: expected [Testyantra] but found [Testyantra450]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at stepDefinitions.OrganizationStepDef.i_navigate_to_organization_information_and_verify(OrganizationStepDef.java:49)
+	at ?.I navigate to organization information and verify(file:///C:/Users/Nitheesha/git/Sdet8Bdd/SDET8BDD/./src/test/resources/Features/Organization.feature:10)
+</pre></div></td>
+<td>49</td>
+<td>runnerIO.Runner@3cb1ffe6</td></tr>
+</table><p>
 </body>
 </html>
